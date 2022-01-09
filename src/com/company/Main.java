@@ -9,27 +9,25 @@ public class Main {
         createNewObject(1);//type number from 1 to 3
         createNewObject(2);//type number from 1 to 3
         createNewObject(3);//type number from 1 to 3
-        createNewObject(4);//type number from 1 to 3
+        //createNewObject(4);//type number from 1 to 3
+        createNewObject(1).print();
 
     }
 
-    public static String createNewObject(int Phone) {
+    public static Phone createNewObject(int Phone) {
         Random a = new Random();
         int b = a.nextInt(30);
         int c = a.nextInt(30);
         switch (Phone) {
             case 1:
                 Xiaomi xiaomi = new Xiaomi(c, b);
-                xiaomi.print();
-                break;
+                return xiaomi;
             case 2:
                 Iphone iphone = new Iphone(c, b);
-                iphone.print();
-                break;
+                return iphone;
             case 3:
                 Samsung samsung = new Samsung(b, c);
-                samsung.print();
-                break;
+                return samsung;
             default:
                 System.out.println("TYPE NUMBER FROM 1 TO 3!!!");
         }
